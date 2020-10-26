@@ -1,9 +1,9 @@
 import _ from 'underscore';
-import EventEmitter from 'wolfy87-eventemitter';
+import Emitter from '@rocket.chat/emitter';
 
 import { menu } from '../../../ui-utils';
 
-const emitter = new EventEmitter();
+const emitter = new Emitter();
 
 window.addEventListener('resize', _.debounce((() => {
 	let lastState = window.matchMedia('(min-width: 780px)').matches ? 'mini' : 'large';
